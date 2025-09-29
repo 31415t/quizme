@@ -62,9 +62,9 @@ function launchQuiz(questions, matiere, mode) {
           <div class="quiz-info">
             <span class="info-block"><i class="fas fa-clock"></i> <span id="timer">${formatTime(timeLeft)}</span></span>
           </div>
-          <span class="info-block2"><i class="fas fa-check-circle"></i><span id="goodCount">${score}</span></span>
-            <span class="info-block2"><i class="fas fa-times-circle"></i><span id="badCount">${current - score}</span></span>
         </div>
+         <span class="info-block2"><i class="fas fa-check-circle"></i><span id="goodCount">${score}</span></span>
+            <span class="info-block2"><i class="fas fa-times-circle"></i><span id="badCount">${current - score}</span></span>
 
         <h3>Question ${current + 1}</h3>
         <p class="latex">${q.question}</p>
@@ -232,3 +232,4 @@ window.renderScoreTab = renderScoreTab;
 window.renderBadgeTab = renderBadgeTab;
 
 window.setActiveTab = setActiveTab;
+
