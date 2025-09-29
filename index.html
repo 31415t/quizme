@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QCM NSIV – Haïti</title>
+
+  <!-- Styles principaux -->
+  <link rel="stylesheet" href="style/main.css">
+
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Favicon (optionnel) -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <!-- KaTeX CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+
+<!-- KaTeX JS + Auto-render -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '\\(', right: '\\)', display: false}
+          ]
+        });">
+</script>
+
+</head>
+<body>
+  <div class="tab-bar">
+    <button id="tab-quiz" class="tab-button active" onclick="renderQuizTab()" data-tab="quiz">
+      <i class="fas fa-brain"></i> QUIZ
+    </button>
+    <button id="tab-score" class="tab-button" onclick="renderScoreTab()" data-tab="score">
+      <i class="fas fa-chart-bar"></i> SCORE
+    </button>
+    <button id="tab-badge" class="tab-button" onclick="renderBadgeTab()" data-tab="badge">
+      <i class="fas fa-award"></i> TROPHÉE
+    </button>
+  </div>
+
+  <!-- Conteneur principal injecté par JS -->
+  <div id="app"></div>
+
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p><strong>Quizme</strong> © 2025</p>
+    <p>Créé par Peterley Auguste - tout droit réservé!</p>
+    <p>Conçu pour rendre la révision <em>fun</em>, <em>visuelle</em> et <em>interactive</em>.</p>
+    <p>Contact : <a href="mailto:peterleyauguste99@gmail.com"><i class="fas fa-envelope"></i></a><span> </span><a href="https://wa.me/50941975392" target="_blank"><i class="fab fa-whatsapp"></i></a></p>
+    <p> <a href="https://github.com/31415t/challengeconcours" target="_blank"><i class="fab fa-github"></i></a> Voir le projet sur GitHub</p>
+  </div>
+</footer>
+
+
+  <!-- Fichiers de données QCM -->
+  <script src="scripts/data/biologie.js"></script>
+  <script src="scripts/data/physique.js"></script>
+  <script src="scripts/data/maths.js"></script>
+  <script src="scripts/data/chimie.js"></script>
+  <script src="scripts/data/francais.js"></script>
+
+  <!-- Modules JS -->
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/gamification.js"></script>
+  <script src="scripts/ui.js"></script>
+  <script src="scripts/accomplishments.js"></script>
+  <script src="scripts/scores.js"></script>
+  <script src="scripts/badges.js"></script>
+  <script src="scripts/events.js"></script>
+  <script src="scripts/app.js"></script>
+
+  <!-- Initialisation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      renderQuizTab(); // active l’onglet QUIZ au démarrage
+    });
+  </script>
+</body>
+</html>
