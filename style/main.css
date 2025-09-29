@@ -163,6 +163,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.info-block2 {
+  opacity: 0;
+}
+
 .quiz-options button {
   display: block;
   width: 100%;
@@ -370,3 +374,4 @@ body {
     position: center;
   }
 }
+
