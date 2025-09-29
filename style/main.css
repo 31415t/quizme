@@ -163,6 +163,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.quiz-info {
+  align-items: center
+}
+
 .info-block2 {
   opacity: 0;
 }
@@ -374,4 +378,5 @@ body {
     position: center;
   }
 }
+
 
