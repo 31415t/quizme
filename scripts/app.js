@@ -52,6 +52,9 @@ const xpBanner = `
 
   app.innerHTML = `
   ${xpBanner}
+      <button class="themed-button danger" onclick="showResetConfirmation()">
+        <i class="fas fa-trash-alt"></i> Réinitialiser les données
+      </button>
 
     ${message}
     <div class="matiere-grid fade-in">
@@ -105,3 +108,27 @@ function startQuiz(mode) {
 
   launchQuiz(questions, selectedMatiere, selectedMode);
 }
+
+function showResetConfirmation() {
+  const app = document.getElementById("app");
+  app.innerHTML = `
+    <div class="confirmation-box fade-in">
+      <h2><i class="fas fa-exclamation-triangle"></i> Réinitialisation</h2>
+      <p>Cette action supprimera <strong>tous vos scores</strong>, <strong>badges débloqués</strong> et <strong>XP accumulé</strong>. Elle est <em>irréversible</em>.</p>
+      <div class="confirmation-buttons">
+        <button class="themed-button danger" onclick="resetAllData()">
+          <i class="fas fa-check-circle"></i> Oui, tout réinitialiser
+        </button>
+        <button class="themed-button" onclick="renderHome()">
+          <i class="fas fa-times-circle"></i> Annuler
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+function resetAllData() {
+  localStorage.clear(); // Supprime tout
+  renderHome(); // Retour à l’accueil
+}
+
