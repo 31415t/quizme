@@ -147,7 +147,7 @@ function launchQuiz(questions, matiere, mode) {
     if (percent === 100) return { label: "GOAT", icon: "fas fa-dragon" };
     if (percent >= 80) return { label: "MAÎTRE", icon: "fas fa-chess-king" };
     if (percent >= 60) return { label: "APPRENTI", icon: "fas fa-user-graduate" };
-    if (percent >= 40) return { label: "EXPLORATEUR", icon: "fas fa-compass" };
+    if (percent >= 40) return { label: "SCOUT", icon: "fas fa-compass" };
     if (percent >= 20) return { label: "DÉBUTANT", icon: "fas fa-seedling" };
     return { label: "COURAGE", icon: "fas fa-face-sad-tear" };
   }
@@ -231,5 +231,6 @@ window.renderScoreTab = renderScoreTab;
 window.renderBadgeTab = renderBadgeTab;
 
 window.setActiveTab = setActiveTab;
+
 
 
