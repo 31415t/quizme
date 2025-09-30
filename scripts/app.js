@@ -82,7 +82,7 @@ function renderModes(matiere) {
       ${renderModeButton("court", "fas fa-hourglass-start", "Mode Court", bestScores.court, "mode-court")}
       ${renderModeButton("moyen", "fas fa-hourglass-half", "Mode Moyen", bestScores.moyen, "mode-moyen")}
       ${renderModeButton("long", "fas fa-hourglass-end", "Mode Long", bestScores.long, "mode-long")}
-      ${renderModeButton("challenge", "fas fa-bolt", "Mode Challenge", bestScores.challenge, "mode-challenge")}
+      <!--${renderModeButton("challenge", "fas fa-bolt", "Mode Challenge", bestScores.challenge, "mode-challenge")}-->
     </div>
     <button class="themed-button" onclick="renderHome()">
       <i class="fas fa-home"></i> Accueil
@@ -131,4 +131,5 @@ function resetAllData() {
   localStorage.clear(); // Supprime tout
   renderHome(); // Retour à l’accueil
 }
+
 
