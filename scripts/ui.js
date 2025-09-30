@@ -61,10 +61,10 @@ function launchQuiz(questions, matiere, mode) {
         <div class="quiz-header">
           <div class="quiz-info">
             <span class="info-block"><i class="fas fa-clock"></i> <span id="timer">${formatTime(timeLeft)}</span></span>
+            <span class="info-block"><i class="fas fa-check-circle"></i><span id="goodCount">${score}</span></span>
+            <span class="info-block"><i class="fas fa-times-circle"></i><span id="badCount">${current - score}</span></span>
           </div>
         </div>
-         <span class="info-block2"><i class="fas fa-check-circle"></i><span id="goodCount">${score}</span></span>
-            <span class="info-block2"><i class="fas fa-times-circle"></i><span id="badCount">${current - score}</span></span>
 
         <h3>Question ${current + 1}</h3>
         <p class="latex">${q.question}</p>
@@ -116,7 +116,6 @@ function launchQuiz(questions, matiere, mode) {
     }, 1000);
 
     if (selected === q.answer) {
-  score++;
   addXP(1); // 🧠 Ajoute 1 XP par bonne réponse
   // ...
 }
@@ -232,4 +231,5 @@ window.renderScoreTab = renderScoreTab;
 window.renderBadgeTab = renderBadgeTab;
 
 window.setActiveTab = setActiveTab;
+
 
